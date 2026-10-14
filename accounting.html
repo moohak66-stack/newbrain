@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>회계·결산·원가 | 박석준 경영·재무 컨설팅</title>
+<style>
+:root{--bg:#fffdf8;--bg2:#fff1e6;--tx:#14213d;--tx2:#5b6478;--ac:#ff5a1f;--ln:#f3d9c4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1020;--bg2:#141b33;--tx:#fff7ee;--tx2:#aab3c9;--ac:#ff7a3d;--ln:#2a3558;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1020;--bg2:#141b33;--tx:#fff7ee;--tx2:#aab3c9;--ac:#ff7a3d;--ln:#2a3558;color-scheme:dark}
+html{scroll-behavior:smooth}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:-apple-system,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+a{color:inherit}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(20px);border-bottom:1px solid var(--ln)}
+nav div{max-width:1040px;margin:auto;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:13px}
+nav b{font-size:15px;color:var(--ac)}nav a{text-decoration:none;opacity:.8}
+.w{max-width:1040px;margin:auto}
+.head{padding:72px 20px 40px;text-align:center}
+.head h1{font-size:clamp(34px,5.5vw,56px);margin:0 0 12px;letter-spacing:-.02em}
+.head p{font-size:clamp(16px,2vw,20px);color:var(--tx2);margin:0}
+.bc{max-width:1040px;margin:28px auto 0;text-align:right;font-size:14px;color:var(--tx2)}
+.bc a{text-decoration:none}.bc i{font-style:normal;margin:0 8px}
+.band{background:linear-gradient(160deg,#0b1428 0%,#1a2847 55%,#101c36 100%);border-bottom:4px solid #d4af37;padding:72px 20px;position:relative}
+.band h2{color:#fff;text-align:center;font-size:clamp(22px,3vw,30px);margin:0 0 36px}
+.car{max-width:1040px;margin:auto;position:relative}
+.trk{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px 2px 18px}
+.trk::-webkit-scrollbar{display:none}
+.card{flex:0 0 calc((100% - 48px)/3);scroll-snap-align:start;background:linear-gradient(160deg,var(--bg) 0%,var(--bg2) 100%);border-radius:8px;padding:30px;box-shadow:0 18px 36px rgba(0,0,0,.35);border-top:5px solid var(--ac);min-height:290px;display:flex;flex-direction:column}
+.card small{color:var(--ac);font-weight:700;font-size:15px}
+.card h3{font-size:22px;line-height:1.35;margin:10px 0 12px}
+.card p{margin:0;color:var(--tx2);font-size:15px}
+.card em{margin-top:auto;padding-top:18px;font-style:normal;font-weight:800;font-size:34px;color:var(--ac);letter-spacing:-.02em}
+.arr{position:absolute;top:42%;width:44px;height:44px;border-radius:50%;border:1px solid #1c1e22;background:linear-gradient(180deg,#5a5d66,#26282d);color:#fff;font-size:22px;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,.4)}
+.arr.l{left:-22px}.arr.r{right:-22px}
+section.s{padding:88px 20px;background:var(--bg2)}
+.s h2{text-align:center;font-size:clamp(28px,4vw,40px);margin:0 0 10px;letter-spacing:-.015em}
+.s .sub{text-align:center;color:var(--tx2);margin:0 0 44px;font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.it{background:linear-gradient(160deg,var(--bg) 0%,var(--bg2) 100%);border:1px solid var(--ln);border-radius:20px;padding:28px;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 12px 28px rgba(20,33,61,.14);transition:transform .2s}
+.it:hover{transform:translateY(-4px)}
+.it i{font-style:normal;display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ac);color:#fff;font-weight:700;font-size:14px}
+.it h3{margin:12px 0 10px;font-size:20px}.it ul{margin:0;padding-left:18px;color:var(--tx2);font-size:15px}.it li{margin:4px 0}
+.note{text-align:center;color:var(--tx2);font-size:13px;margin:28px 0 0}
+.back{display:inline-block;margin-top:18px;padding:11px 24px;border:1px solid #1c1e22;border-radius:980px;background:linear-gradient(180deg,#5a5d66 0%,#3a3d44 50%,#26282d 100%);color:#fff;text-decoration:none;font-weight:700;font-size:15px;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 4px 10px rgba(0,0,0,.28);transition:transform .15s}.back:hover{transform:translateY(-1px)}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;align-items:stretch;background:#141518;color:#fff;padding-bottom:env(safe-area-inset-bottom,0px);box-shadow:0 -8px 24px rgba(0,0,0,.3)}
+.bar .t{background:linear-gradient(135deg,#ff3d00,#ff9100);padding:14px 28px;display:flex;flex-direction:column;justify-content:center;white-space:nowrap}
+.bar .t small{opacity:.95;font-weight:600}.bar .t b{font-size:17px}
+.bar .f{flex:1;display:flex;align-items:center;gap:12px;padding:14px 24px;flex-wrap:wrap}
+.bar label{font-size:16px}.bar input[type=text]{height:42px;border:0;border-radius:6px;padding:0 12px;font:inherit;font-size:15px;width:190px;max-width:100%}
+.go{display:inline-block;text-align:center;padding:10px 26px;border:1px solid #000;border-radius:980px;background:linear-gradient(180deg,#5a5d66,#26282d);color:#fff;text-decoration:none;font-weight:700;box-shadow:inset 0 1px 0 rgba(255,255,255,.22)}
+.ag{font-size:14px;display:flex;align-items:center;gap:6px}.ag.warn{color:#ffb199}
+@media(max-width:860px){.card{flex-basis:86%}.grid{grid-template-columns:1fr}.arr{display:none}.bar{position:static}body{padding-bottom:0}.bar{flex-direction:column}.bc{text-align:center}}
+</style>
+</head>
+<body>
+<nav><div><a href="index.html"><b>박석준 컨설팅</b></a><a href="index.html">‹ 컨설팅 분야로 돌아가기</a></div></nav>
+
+<div class="head"><h1>회계·결산·원가</h1><p>숫자가 경영 판단에 쓰이도록 회계 체계를 정비합니다.</p><a class="back" href="index.html">‹ 메인 홈페이지로 돌아가기</a>
+<div class="bc"><a href="index.html">홈</a><i>&gt;</i>컨설팅 분야<i>&gt;</i>회계·결산·원가</div></div>
+
+<div class="band"><h2>회계·결산·원가 수행 실적</h2>
+<div class="car"><button class="arr l" id="pv" aria-label="이전">‹</button>
+<div class="trk" id="trk">
+<div class="card"><small>결산·회계관리</small><h3>3개 회사 결산·회계관리</h3><p>건설장비 제조·임대 기업에서 3개 회사의 내부 결산과 회계관리를 진행했습니다.</p><em>3개사</em></div>
+<div class="card"><small>결산 경험</small><h3>결산 다수 · 외부감사 5년</h3><p>자체기장 결산 5회 이상, 다년간 결산과 외부감사 5년(상장 준비 외감 포함)을 수행했습니다.</p><em>외감 5년</em></div>
+<div class="card"><small>원가관리</small><h3>제조원가·공사원가 관리</h3><p>제조와 공사 원가를 구분해 관리하는 체계를 운영했습니다.</p><em>원가</em></div>
+<div class="card"><small>개별원가 손익</small><h3>개별원가 기반 월 손익 보고</h3><p>210명 규모 제조기업에서 개별원가로 매월 손익을 작성해 보고했습니다.</p><em>월 손익</em></div>
+<div class="card"><small>외부감사 대응</small><h3>매출·원가·재고 감사 대응</h3><p>외부감사 2회에서 매출, 원가, 재고에 대한 감사에 대응했습니다.</p><em>2회</em></div>
+<div class="card"><small>관리회계</small><h3>월 손익분석·원가분석</h3><p>월 손익분석, 원가분석, 프로젝트 관리를 포함한 관리회계를 운영했습니다.</p><em>관리회계</em></div>
+</div><button class="arr r" id="nx" aria-label="다음">›</button></div></div>
+
+<section class="s"><div class="w">
+<h2>세부 컨설팅 내용</h2><p class="sub">기업 규모와 업종에 맞춰 결산부터 원가·감사 대응까지 체계를 갖춥니다.</p>
+<div class="grid">
+<div class="it"><i>1</i><h3>결산 프로세스 정비</h3><ul><li>월·분기·연 결산 절차 점검</li><li>결산 일정과 담당 체계 수립</li><li>계정과목·증빙 관리 기준 정리</li></ul></div>
+<div class="it"><i>2</i><h3>관리회계·월 손익</h3><ul><li>월 손익분석 및 보고 체계</li><li>사업부·프로젝트별 손익 구분</li><li>경영진 보고 양식 설계</li></ul></div>
+<div class="it"><i>3</i><h3>원가관리</h3><ul><li>제조원가·공사원가 산정 체계</li><li>개별원가 기반 손익 작성</li><li>원가 개선 포인트 도출</li></ul></div>
+<div class="it"><i>4</i><h3>외부감사 대응</h3><ul><li>감사 전 사전 점검</li><li>매출·원가·재고 자료 준비</li><li>감사 지적사항 개선 지원</li></ul></div>
+<div class="it"><i>5</i><h3>세무·신고 체계</h3><ul><li>부가세 등 신고 일정 관리</li><li>세무 리스크 사전 점검</li><li>세무사와의 협업 체계 정비</li></ul></div>
+<div class="it"><i>6</i><h3>경영진 보고 체계</h3><ul><li>그룹·임원회의용 분기 보고 자료</li><li>사업계획 대비 실적 분석</li><li>의사결정용 핵심 지표 정리</li></ul></div>
+</div>
+<p style="text-align:center;margin:40px 0 0"><a class="back" href="index.html">‹ 메인 홈페이지로 돌아가기</a></p><p class="note">수행 실적은 컨설턴트가 재직한 기업에서의 경험이며, 회계·세무 처리의 최종 판단은 기업 상황과 관련 기준에 따라 달라질 수 있습니다.</p>
+</div></section>
+
+<div class="bar"><div class="t"><small>회계 · 결산 상담</small><b>crosspark@naver.com</b></div>
+<div class="f"><label for="nm">이름</label><input type="text" id="nm" placeholder="이름을 입력해주세요."><label for="ct">연락처</label><input type="text" id="ct" placeholder="휴대폰 또는 이메일"><a class="go" id="go" href="mailto:crosspark@naver.com">상담신청하기</a><label class="ag" id="ag"><input type="checkbox" id="ck">개인정보취급방침 동의</label><span id="st" style="flex-basis:100%;font-size:14px;color:#ffd7c7"></span></div></div>
+
+<script>
+const T=document.getElementById('trk'),S=()=>T.querySelector('.card').offsetWidth+24;
+pv.onclick=()=>T.scrollBy({left:-S(),behavior:'smooth'});nx.onclick=()=>T.scrollBy({left:S(),behavior:'smooth'});
+function up(){go.href='mailto:crosspark@naver.com?subject='+encodeURIComponent('[회계 · 결산 상담] '+nm.value)+'&body='+encodeURIComponent('이름: '+nm.value+'\n연락처: '+ct.value+'\n상담 내용:')}
+nm.oninput=ct.oninput=up;
+const ENDPOINT='';/* 폼 발송 서비스(Formspree) 주소를 여기에 입력: 'https://formspree.io/f/xxxxxxxx' */
+go.onclick=async e=>{
+if(!nm.value.trim()||!ct.value.trim()){e.preventDefault();st.textContent='이름과 연락처를 입력해주세요.';return}
+if(!ck.checked){e.preventDefault();ag.classList.add('warn');st.textContent='개인정보취급방침에 동의해주세요.';return}
+if(!ENDPOINT)return;
+e.preventDefault();st.textContent='전송 중입니다...';
+try{const r=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:nm.value,contact:ct.value,_subject:'[자금 조달 상담] '+nm.value})});
+if(!r.ok)throw 0;st.textContent='상담 신청이 접수되었습니다. 곧 연락드리겠습니다.';nm.value='';ct.value='';ck.checked=false}
+catch(x){st.textContent='전송에 실패했습니다. 메일 창으로 연결합니다.';location.href=go.href}};
+ck.onchange=()=>{ag.classList.remove('warn');st.textContent=''};
+</script>
+</body>
+</html>
