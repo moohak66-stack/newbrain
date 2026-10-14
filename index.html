@@ -72,7 +72,8 @@ h2{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:0 0 12px;letter-spacin
 <div><span>2017 – 2018</span><p>핀테크·PG 스타트업 CFO — VC 2차 투자까지 유치, PG 사업 등록 완료</p></div>
 <div><span>2015 – 2017</span><p>210명 규모 제조기업 인사기획팀장 — 개별원가 손익, KPI 인사평가, 외부감사 대응, 주주총회 총괄</p></div>
 <div><span>2003 – 2008</span><p>온라인 마케팅 기업 경영관리본부 부장 — 상장 준비 감사 대응, 역합병(M&A), KT 5억 원 투자 유치</p></div>
-<div><span>2000 – 2002</span><p>코스닥 상장사 기획실 — 코스닥 등록 실무, 전자공시·IR, ERP 구축(ERP 우수상 수상)</p></div>
+<div><span>2000 – 2002</span><p>코스닥 상장사 기획실 — 코스닥 등록 실무, 전자공시·IR, ERP 구
+축(ERP 우수상 수상)</p></div>
 </div></div></section>
 
 <section class="c hero" id="contact"><div class="w">
@@ -91,11 +92,11 @@ const A=[
 ["인사·조직","회사 규모와 성장 단계에 맞는 인사 제도를 설계합니다.",["KPI·목표관리(MBO) 제도 설계 및 도입","인사평가와 연봉 연계 체계","인사위원회 운영 및 징계 절차","조직 구조 및 업무 분장 재정립","일학습병행제 등 정부 지원금 활용"]],
 ["경영기획·신규사업","사업계획부터 신규사업 추진까지 기획을 지원합니다.",["연간 사업계획 및 손익계획 수립","신규사업 기획·제휴 및 사업화","마케팅 목표 설정 및 매출 성장 전략","M&A 및 합병 실무 지원","해외 시장 진출·수출입 업무 지원"]],
 ["경영 인프라·인증","제도와 시스템으로 회사의 기반을 단단히 합니다.",["벤처기업·이노비즈 인증 및 기업부설연구소 설립","ERP 도입 PM — 업무 프로세스 재정립","총무·법무·채권관리 체계 구축","지적재산권 관련 업무 정비","대표이사와의 협의를 통한 전사 업무 프로세스 개선"]]];
-const L=const L=["finance.html","accounting.html","ipo.html","hr.html","planning.html","infra.html"];/* 분야별 상세페이지 주소(순서 = 버튼 순서) */
+const L=["https://moohak66-stack.github.io/newbrain/finance.html","https://moohak66-stack.github.io/newbrain/accounting.html","https://moohak66-stack.github.io/newbrain/ipo.html","https://moohak66-stack.github.io/newbrain/hr.html","https://moohak66-stack.github.io/newbrain/planning.html","infra.html"];/* 분야별 상세페이지 파일(순서 = 버튼 순서) */
 const t=document.getElementById('tabs'),p=document.getElementById('panel');
 function show(i){[...t.children].forEach((b,k)=>b.setAttribute('aria-selected',k==i));
-const a=A[i];p.innerHTML='<div><small>0'+(i+1)+' / 0'+A.length+'</small><h3>'+a[0]+'</h3><p>'+a[1]+'</p>'+(L[i]?'<a class="more" href="'+L[i]+'" target="_blank" rel="noopener">상세페이지 보기 ›</a>':'')+'</div><ul>'+a[2].map(x=>'<li>'+x+'</li>').join('')+'</ul>'}
-A.forEach((a,i)=>{const b=document.createElement('button');b.textContent=a[0];b.setAttribute('role','tab');b.onclick=()=>{show(i);if(L[i])window.open(L[i],'_blank','noopener')};b.onmouseenter=()=>show(i);b.onfocus=()=>show(i);t.appendChild(b)});
+const a=A[i];p.innerHTML='<div><small>0'+(i+1)+' / 0'+A.length+'</small><h3>'+a[0]+'</h3><p>'+a[1]+'</p>'+(L[i]?'<a class="more" href="'+L[i]+'">상세페이지 보기 ›</a>':'')+'</div><ul>'+a[2].map(x=>'<li>'+x+'</li>').join('')+'</ul>'}
+A.forEach((a,i)=>{const b=document.createElement('button');b.textContent=a[0];b.setAttribute('role','tab');b.onclick=()=>{show(i);if(L[i])location.href=L[i]};b.onmouseenter=()=>show(i);b.onfocus=()=>show(i);t.appendChild(b)});
 show(0);
 </script>
 </body>
